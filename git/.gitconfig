@@ -1,7 +1,7 @@
 [user]
 	name = David Asensio Cañas
 	email = david.asensio@icloud.com
-	signingkey = DCB8C6C85BC1696B
+	signingkey = 8B35EA686DF55CCA78D145B7623261AA6EC1E141
 [alias]
 	st = status
 	lg = log --graph --decorate --date-order --oneline
