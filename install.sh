@@ -4,6 +4,7 @@
 # everywhere.
 export DOTFILES_PATH="$HOME/.dotfiles"
 export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
+export DOTLY_ENV=PROD
 
 # Installation
 
