@@ -1,4 +1,4 @@
-## Restore your Dotfiles
+## Installation process
 
 * Install git
 * Clone dotfiles repository `git clone https://github.com/d-asensio/dotfiles $HOME/.dotfiles`
