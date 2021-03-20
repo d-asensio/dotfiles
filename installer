@@ -23,5 +23,11 @@ git submodule update --init --recursive
 # Install dotfiles
 "$DOTLY_PATH/bin/dot" self install
 
+# Source bash config
+source ~/.bashrc
+
+# Reset brew to ensure a fresh installation
+brew update-reset
+
 # Import packages
-bash -c "dot package import"
+dot package import
