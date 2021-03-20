@@ -37,7 +37,7 @@
            [:p [:paste "➕"]]
            [:u [:paste "👍"]]
            [:v [:paste "✅"]]]}]
- 
+
  ;; ------------ Cheatsheet ------------
  ;; !  stand for mandatory
  ;; #  stand for optional
