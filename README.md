@@ -1,16 +1,29 @@
 ## Installation process
 
-Ensure that a recent git version is installed:
+1. Ensure that a recent git version is installed:
 
 ```bash
 git --version
 ```
 
-Run the install script
+2. Login to the mac app store
 
-```bash
-bash <(curl -s https://raw.githubusercontent.com/d-asensio/dotfiles/master/installer)
-```
+3. Run the install script
+
+  ```bash
+  bash <(curl -s https://raw.githubusercontent.com/d-asensio/dotfiles/master/installer)
+  ```
+
+4. eset brew to ensure a fresh installation
+  ```bash
+  brew update-reset
+  ```
+
+5. Import packages
+
+  ```bash
+  dot package import
+  ```
 
 You are done!
 
