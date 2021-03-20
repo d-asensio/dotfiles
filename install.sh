@@ -2,8 +2,8 @@
 
 # Temporal variables for the installation to work, once dotfiles are installed, those are exported and available
 # everywhere.
-DOTFILES_PATH="$HOME/.dotfiles"
-DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
+export DOTFILES_PATH="$HOME/.dotfiles"
+export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
 
 # Installation
 
