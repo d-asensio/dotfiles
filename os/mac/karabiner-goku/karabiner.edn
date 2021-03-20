@@ -1,0 +1,59 @@
+{:profiles
+ {:Default
+  {:alone              500
+   :default            true
+   :delay              200
+   :held               500
+   :sim                200
+   :simlayer-threshold 220}}
+ :simlayers {:open-mode {:key :o}
+             :emoji-mode {:key :e}}
+
+ :templates {:paste "osascript -e '
+                       set the clipboard to \"%s\"
+                       tell application \"System Events\"
+                               keystroke \"v\" using command down
+                       end tell
+             '"
+             :open "open -a '%s.app'"}
+ :main
+ [;; ------------ Modes ------------
+  {:des   "Open mode"
+   :rules [:open-mode
+           [:c [:open "Google Chrome"]]
+           [:v [:open "Visual Studio Code"]]
+           [:e [:open "Microsoft Edge"]]
+           [:m [:open "Mail"]]
+           [:n [:open "Notion"]]
+           [:s [:open "Slack"]]
+           [:t [:open "iTerm"]]]}
+
+  {:des   "Emoji mode"
+   :rules [:emoji-mode
+           [:d [:paste "👎"]]
+           [:g [:paste "😬"]]
+           [:l [:paste "😂"]]
+           [:p [:paste "➕"]]
+           [:s [:paste "👍"]]
+           [:v [:paste "✅"]]]}]
+ 
+ ;; ------------ Cheatsheet ------------
+ ;; !  stand for mandatory
+ ;; #  stand for optional
+ ;; !! stand for mandatory command + control + optional + shift (hyper)
+ ;; ## stand for optional any
+ ;; C T O S for left command control option shift
+ ;; Q W E R for right command control option shift
+ ;; F for fn
+ ;; need to prefix C T O S F Q W E R with ! or #
+ :cheatsheet
+ {:!Ca        "command a"
+  :!Ta        "control a"
+  :!Oa        "option a"
+  :!Sa        "shift a"
+  :#Sa        "shift a"
+  :!CTOa      "command control option a"
+  :!Cspacebar "command space"
+  :!Fa        "fn a"
+  :##a        "keycode a optional any"
+  :!!a        "mandatory hyper (control command option shift) a "}}

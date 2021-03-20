@@ -4,6 +4,3 @@
     link:
       create: true
       force: true
-
-- link:
-    ~/.dotly: os/linux/.dotly

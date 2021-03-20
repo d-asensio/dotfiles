@@ -9,7 +9,8 @@
       - ~/.hushlogin
 
 - link:
-    ~/.dotly: os/mac/.dotly
+    ~/.config/karabiner.edn: os/mac/karabiner-goku/karabiner.edn
+    ~/.config/karabiner: os/mac/karabiner-elements
     ~/bin/bash: /usr/local/bin/bash
     ~/bin/date: /usr/local/bin/gdate
     ~/bin/find: /usr/local/opt/findutils/bin/gfind
