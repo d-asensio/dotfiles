@@ -11,6 +11,7 @@ export path=(
   "$HOME/bin"
   "$DOTLY_PATH/bin"
   "$DOTFILES_PATH/bin"
+  "$HOME/.volta/bin"
   "$JAVA_HOME/bin"
   "$GEM_HOME/bin"
   "$GOPATH/bin"
