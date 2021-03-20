@@ -9,7 +9,7 @@ git --version
 Run the install script
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/d-asensio/dotfiles/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/d-asensio/dotfiles/master/installer)
 ```
 
 You are done!

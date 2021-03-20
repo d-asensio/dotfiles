@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 # Temporal variables for the installation to work, once dotfiles are installed, those are exported and available
 # everywhere.
-DOTFILES_PATH="$HOME/.dotfiles"
-DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
-
-# Export variables that are needed by child scripts
-export DOTFILES_PATH="$DOTFILES_PATH"
-export DOTLY_PATH="$DOTLY_PATH"
-export DOTLY_ENV="PROD"
+export DOTFILES_PATH="$HOME/.dotfiles"
+export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
+export DOTLY_ENV=PROD
+export DOTLY_INSTALLER=true
 
 # Installation
 
