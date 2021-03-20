@@ -21,6 +21,8 @@ alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gl="$DOTLY_PATH/bin/dot git pretty-log"
 
+alias nr="npm run"
+
 # Utils
 alias k='kill -9'
 alias i.='(idea $PWD &>/dev/null &)'
