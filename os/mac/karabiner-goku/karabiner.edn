@@ -21,7 +21,7 @@
   {:des   "Open mode"
    :rules [:open-mode
            [:c [:open "Google Chrome"]]
-           [:e [:open "Mizcrosoft Edge"]]
+           [:e [:open "Microsoft Edge"]]
            [:s [:open "Slack"]]
            [:t [:open "Telegram"]]
            [:v [:open "Visual Studio Code"]]
