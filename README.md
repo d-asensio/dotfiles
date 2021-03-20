@@ -13,3 +13,5 @@ bash <(curl -s https://raw.githubusercontent.com/d-asensio/dotfiles/master/insta
 ```
 
 You are done!
+
+> These dotfiles have been created using [dotly](https://github.com/CodelyTV/dotly)
