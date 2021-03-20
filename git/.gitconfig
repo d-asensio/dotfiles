@@ -1,0 +1,21 @@
+[user]
+	name = David Asensio Cañas
+	email = david.asensio@icloud.com
+	signingkey = DCB8C6C85BC1696B
+[alias]
+	st = status
+	lg = log --graph --decorate --date-order --oneline
+	c = commit
+	ck = checkout
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg]
+	program = gpg
+
+# Conditional configurations
+[includeIf "gitdir:~/projects/lifull/"]
+	path = ~/projects/lifull/.gitconfig

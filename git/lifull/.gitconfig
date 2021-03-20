@@ -1,0 +1,6 @@
+[user]
+	email = david.asensio@lifullconnect.com
+[commit]
+	gpgsign = false
+[tag]
+	gpgsign = false

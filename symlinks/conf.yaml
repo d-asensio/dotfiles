@@ -6,6 +6,8 @@
       force: true
 
 - link:
+    ~/.gitconfig: git/.gitconfig
+    ~/projects/lifull/.gitconfig: git/lifull/.gitconfig
     ~/.bash_profile: shell/bash/.bash_profile
     ~/.bashrc: shell/bash/.bashrc
     ~/.zimrc: shell/zsh/.zimrc
