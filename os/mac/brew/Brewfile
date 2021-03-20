@@ -29,6 +29,7 @@ brew "yqrashawn/goku/goku"
 cask "1password"
 cask "alfred"
 cask "docker"
+cask "figma"
 cask "google-chrome"
 cask "gpg-suite"
 cask "insomnia"
@@ -49,4 +50,6 @@ cask "zoom"
 mas "Amphetamine", id: 937984704
 mas "Keka", id: 470158793
 mas "Magnet", id: 441258766
+mas "Marked 2", id: 890031187
 mas "Paste", id: 967805235
+mas "Xcode", id: 497799835
