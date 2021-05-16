@@ -4,7 +4,7 @@ This is a trobleshooting guide to help my future self solve problems with my dot
 
 ## Issues with GPG and git
 
-To solve this kind of issues, follow the steps described in [this repo](https://github.com/pstadler/keybase-gpg-github)
+To solve this kind of issues, follow the steps described in [this article](https://dev.to/wes/how2-using-gpg-on-macos-without-gpgtools-428f)
 
 ## Changes on karabiner.edn file are not taking effect
 
