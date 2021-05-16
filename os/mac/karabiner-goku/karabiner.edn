@@ -7,15 +7,25 @@
    :sim                200
    :simlayer-threshold 220}}
  :simlayers {:open-mode {:key :o}
-             :emoji-mode {:key :e}}
+             :emoji-mode {:key :e}
+             :vscode-chord-mode {:key :k}}
 
- :templates {:paste "osascript -e '
-                       set the clipboard to \"%s\"
-                       tell application \"System Events\"
-                               keystroke \"v\" using command down
-                       end tell
+ :templates {:open "open -a '%s.app'"
+             :paste "osascript -e '
+              set the clipboard to \"%s\"
+              tell application \"System Events\"
+                keystroke \"v\" using command down
+              end tell
              '"
-             :open "open -a '%s.app'"}
+             :send-chord-to-vscode "osascript -e '
+              tell application \"Visual Studio Code\"
+              	activate
+              	tell application \"System Events\"
+              		keystroke \"k\" using command down
+              		keystroke \"%s\"
+              	end tell
+              end tell
+             '"}
  :main
  [;; ------------ Modes ------------
   {:des   "Open mode"
@@ -36,7 +46,13 @@
            [:l [:paste "😂"]]
            [:p [:paste "➕"]]
            [:u [:paste "👍"]]
-           [:v [:paste "✅"]]]}]
+           [:v [:paste "✅"]]]}
+
+  {:des   "Visual Studio Code chord mode"
+   :rules [:vscode-chord-mode
+           [:w [:send-chord-to-vscode "w"]]
+           [:s [:send-chord-to-vscode "😬"]]]}]
+ 
 
  ;; ------------ Cheatsheet ------------
  ;; !  stand for mandatory

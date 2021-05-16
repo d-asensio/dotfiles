@@ -382,7 +382,7 @@
             "key_code" : "d"
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"👎\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"👎\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "conditions" : [ {
             "name" : "emoji-mode",
@@ -401,7 +401,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"👎\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"👎\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -427,7 +427,7 @@
             "key_code" : "s"
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"😬\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"😬\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "conditions" : [ {
             "name" : "emoji-mode",
@@ -446,7 +446,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"😬\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"😬\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -472,7 +472,7 @@
             "key_code" : "l"
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"😂\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"😂\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "conditions" : [ {
             "name" : "emoji-mode",
@@ -491,7 +491,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"😂\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"😂\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -517,7 +517,7 @@
             "key_code" : "p"
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"➕\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"➕\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "conditions" : [ {
             "name" : "emoji-mode",
@@ -536,7 +536,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"➕\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"➕\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -562,7 +562,7 @@
             "key_code" : "u"
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"👍\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"👍\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "conditions" : [ {
             "name" : "emoji-mode",
@@ -581,7 +581,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"👍\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"👍\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -607,7 +607,7 @@
             "key_code" : "v"
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"✅\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"✅\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "conditions" : [ {
             "name" : "emoji-mode",
@@ -626,7 +626,7 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e '\n                       set the clipboard to \"✅\"\n                       tell application \"System Events\"\n                               keystroke \"v\" using command down\n                       end tell\n             '"
+            "shell_command" : "osascript -e '\n              set the clipboard to \"✅\"\n              tell application \"System Events\"\n                keystroke \"v\" using command down\n              end tell\n             '"
           } ],
           "from" : {
             "simultaneous" : [ {
@@ -642,6 +642,99 @@
               "to_after_key_up" : [ {
                 "set_variable" : {
                   "name" : "emoji-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        } ]
+      }, {
+        "description" : "Visual Studio Code chord mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"w\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "conditions" : [ {
+            "name" : "vscode-chord-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vscode-chord-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"w\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "k"
+            }, {
+              "key_code" : "w"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "vscode-chord-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"😬\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "conditions" : [ {
+            "name" : "vscode-chord-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vscode-chord-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"😬\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "k"
+            }, {
+              "key_code" : "s"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "vscode-chord-mode",
                   "value" : 0
                 }
               } ]
