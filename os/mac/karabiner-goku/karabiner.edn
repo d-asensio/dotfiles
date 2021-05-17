@@ -51,7 +51,9 @@
   {:des   "Visual Studio Code chord mode"
    :rules [:vscode-chord-mode
            [:w [:send-chord-to-vscode "w"]]
-           [:s [:send-chord-to-vscode "😬"]]]}]
+           [:d [:send-chord-to-vscode "d"]]
+           [:s [:send-chord-to-vscode "s"]]
+           [:a [:send-chord-to-vscode "a"]]]}]
  
 
  ;; ------------ Cheatsheet ------------

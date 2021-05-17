@@ -697,10 +697,10 @@
           }
         }, {
           "from" : {
-            "key_code" : "s"
+            "key_code" : "d"
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"😬\"\n              \tend tell\n              end tell\n             '"
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"d\"\n              \tend tell\n              end tell\n             '"
           } ],
           "conditions" : [ {
             "name" : "vscode-chord-mode",
@@ -719,13 +719,103 @@
               "value" : 1
             }
           }, {
-            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"😬\"\n              \tend tell\n              end tell\n             '"
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"d\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "k"
+            }, {
+              "key_code" : "d"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "vscode-chord-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"s\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "conditions" : [ {
+            "name" : "vscode-chord-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vscode-chord-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"s\"\n              \tend tell\n              end tell\n             '"
           } ],
           "from" : {
             "simultaneous" : [ {
               "key_code" : "k"
             }, {
               "key_code" : "s"
+            } ],
+            "simultaneous_options" : {
+              "detect_key_down_uninterruptedly" : true,
+              "key_down_order" : "strict",
+              "key_up_order" : "strict_inverse",
+              "key_up_when" : "any",
+              "to_after_key_up" : [ {
+                "set_variable" : {
+                  "name" : "vscode-chord-mode",
+                  "value" : 0
+                }
+              } ]
+            }
+          }
+        }, {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"a\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "conditions" : [ {
+            "name" : "vscode-chord-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "type" : "basic",
+          "parameters" : {
+            "basic.simultaneous_threshold_milliseconds" : 250
+          },
+          "to" : [ {
+            "set_variable" : {
+              "name" : "vscode-chord-mode",
+              "value" : 1
+            }
+          }, {
+            "shell_command" : "osascript -e '\n              tell application \"Visual Studio Code\"\n              \tactivate\n              \ttell application \"System Events\"\n              \t\tkeystroke \"k\" using command down\n              \t\tkeystroke \"a\"\n              \tend tell\n              end tell\n             '"
+          } ],
+          "from" : {
+            "simultaneous" : [ {
+              "key_code" : "k"
+            }, {
+              "key_code" : "a"
             } ],
             "simultaneous_options" : {
               "detect_key_down_uninterruptedly" : true,
