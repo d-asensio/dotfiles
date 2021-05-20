@@ -53,7 +53,8 @@
            [:w [:send-chord-to-vscode "w"]]
            [:d [:send-chord-to-vscode "d"]]
            [:s [:send-chord-to-vscode "s"]]
-           [:a [:send-chord-to-vscode "a"]]]}]
+           [:a [:send-chord-to-vscode "a"]]
+           [:q [:send-chord-to-vscode "q"]]]}]
  
 
  ;; ------------ Cheatsheet ------------
