@@ -6,8 +6,8 @@
       force: true
 
 - link:
-    ~/.xprofile: os/linux/xorg/.xprofile
-    ~/.Xresources: os/linux/xorg/.xresources
-    ~/.xsessionrc: os/linux/xorg/.xsessionrc
+    ~/.xmodmap: os/linux/xmodmap/xmodmaprc
+    ~/.xprofile: os/linux/xorg/xprofile
+    ~/.Xresources: os/linux/xorg/xresources
+    ~/.xsessionrc: os/linux/xorg/xsessionrc
     ~/.config/picom/picom.conf: os/linux/picom/picom.conf
-    ~/.config/sxhkd/sxhkdrc: os/linux/sxhkd/sxhkdrc
