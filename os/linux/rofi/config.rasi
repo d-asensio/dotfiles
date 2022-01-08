@@ -1,5 +1,8 @@
 configuration {
  modi: "drun,run,window";
+ font: "FiraCode Nerd Font 12";
  show-icons: true;
+ icon-theme: "Papirus-Dark";
+ width: 600;
 }
-@theme "gruvbox-dark-hard"
+@theme "~/.config/rofi/themes/custom-dark.rasi"

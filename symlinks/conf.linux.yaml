@@ -13,3 +13,5 @@
     ~/.config/picom/picom.conf: os/linux/picom/picom.conf
     ~/.config/polybar/config: os/linux/polybar/config
     ~/.config/rofi/config.rasi: os/linux/rofi/config.rasi
+    ~/.config/rofi/themes: os/linux/rofi/themes
+    ~/.icons: os/linux/cursors
