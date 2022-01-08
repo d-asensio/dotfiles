@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# Config screens on login
-dot screen-layout dual_ultrawide-rotated &

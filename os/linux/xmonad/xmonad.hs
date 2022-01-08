@@ -255,7 +255,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do
   setWMName "LG3D"
-  spawnOnce "dot xmonad autostart &"
+  spawnOnce "bash $HOME/.dotfiles/scripts/xmonad/autostart &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
