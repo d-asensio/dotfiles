@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Config screens on login
+~/.screenlayout/dual_ultrawide_rotated.sh

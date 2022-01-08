@@ -4,3 +4,8 @@
     link:
       create: true
       force: true
+
+- link:
+    ~/.xprofile: os/linux/xorg/.xprofile
+    ~/.Xresources: os/linux/xorg/.xresources
+    ~/.xsessionrc: os/linux/xorg/.xsessionrc

@@ -1,0 +1,18 @@
+#!/bin/bash
+# Remap keyboard
+sxhkd &
+
+# Set default cursor (when focusing to xmonad wallpaper) to left pointer 
+xsetroot -cursor_name Left_ptr
+
+# Set background image with feh
+feh --image-bg "#050505" \
+  --bg-max $HOME/wallpapers/salman-khan-IksncVbq6ss-unsplash.jpg \
+  --bg-max $HOME/wallpapers/rui-silva-sj-wPZDQT057cE-unsplash.jpg &
+
+# Run clipboard daemon
+greenclip daemon &
+
+#Font directory rehash (Siji font)
+xset +fp $HOME/.local/share/fonts
+xset fp rehash
