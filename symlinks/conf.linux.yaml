@@ -10,3 +10,4 @@
     ~/.Xresources: os/linux/xorg/.xresources
     ~/.xsessionrc: os/linux/xorg/.xsessionrc
     ~/.config/picom/picom.conf: os/linux/picom/picom.conf
+    ~/.config/sxhkd/sxhkdrc: os/linux/sxhkd/sxhkdrc

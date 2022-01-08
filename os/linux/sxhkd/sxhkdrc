@@ -1,0 +1,26 @@
+XF86AudioRaiseVolume
+  amixer -D pulse sset Master 5%+
+
+shift + XF86AudioRaiseVolume
+  amixer -D pulse sset Master 10%+
+
+XF86AudioLowerVolume
+  amixer -D pulse sset Master 5%-
+
+shift + XF86AudioLowerVolume
+  amixer -D pulse sset Master 10%-
+
+XF86AudioMute
+  amixer -D pulse set Master 1+ toggle
+
+XF86AudioPrev
+  playerctl previous
+
+XF86AudioPlay
+  playerctl play-pause
+
+XF86AudioNext
+  playerctl next
+
+super + shift + dollar
+  flameshot gui &
