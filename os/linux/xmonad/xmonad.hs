@@ -9,19 +9,18 @@
 
 import qualified Data.Map as M
 import Data.Monoid
+import Data.Ratio
 import System.Exit
-
 import XMonad
-import XMonad.Hooks.SetWMName
-import XMonad.Hooks.ManageHelpers
-
-import XMonad.Util.SpawnOnce
-
-import qualified XMonad.StackSet as W
-import XMonad.Hooks.ManageDocks (avoidStruts, docks, ToggleStruts (ToggleStruts))
-import XMonad.Layout.Spacing
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.ManageDocks (ToggleStruts (ToggleStruts), avoidStruts, docks)
+import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.SetWMName
 import XMonad.Layout.Fullscreen
+import XMonad.Layout.Spacing
+import XMonad.StackSet (RationalRect (RationalRect))
+import qualified XMonad.StackSet as W
+import XMonad.Util.SpawnOnce
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -38,9 +37,10 @@ myClickJustFocuses = False
 
 -- Gap around the screen and windows
 myScreenGap = Border 0 5 5 5
+
 myWindowGap = Border 5 5 5 5
 
-applyGaps = spacingRaw False  myScreenGap True myWindowGap True
+applyGaps = spacingRaw False myScreenGap True myWindowGap True
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -64,8 +64,11 @@ myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 -- Window Border
 --
 myBorderWidth = 2
+
 myNormalBorderColor = "#161a1d"
+
 myFocusedBorderColor = "#e5383b"
+
 -- myFocusedBorderColor = "#ba181b"
 
 ------------------------------------------------------------------------
@@ -76,9 +79,9 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
   M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf),
-      -- launch rofi 
-      ((controlMask , xK_space), spawn "rofi -show drun"),
-      ((controlMask , xK_Tab), spawn "rofi -modi window -show window"),
+      -- launch rofi
+      ((controlMask, xK_space), spawn "rofi -show drun"),
+      ((controlMask, xK_Tab), spawn "rofi -modi window -show window"),
       -- -- In paste mode
       ((modm .|. shiftMask, xK_v), spawn "zsh $HOME/.dotfiles/scripts/rofi/clipboard-manager"),
       -- -- In emoji mode
@@ -111,8 +114,7 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
       -- Expand the master area
       ((modm, xK_l), sendMessage Expand),
       -- Push window back into tiling
-      ((modm,               xK_t     ), withFocused $ windows . W.sink),
-
+      ((modm, xK_t), withFocused $ windows . W.sink),
       -- Increment the number of windows in the master area
       ((modm, xK_comma), sendMessage (IncMasterN 1)),
       -- Deincrement the number of windows in the master area
@@ -121,7 +123,7 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
       -- Use this binding with avoidStruts from Hooks.ManageDocks.
       -- See also the statusBar function from Hooks.DynamicLog.
       --
-      ((modm              , xK_b     ), sendMessage ToggleStruts),
+      ((modm, xK_b), sendMessage ToggleStruts),
       -- Quit xmonad
       ((modm .|. shiftMask, xK_q), io exitSuccess),
       -- Restart xmonad
@@ -156,16 +158,16 @@ myMouseBindings XConfig {XMonad.modMask = modm} =
     -- mod-button1, Set the window to floating mode and move by dragging
     [ ( (modm, button1),
         \w ->
-            focus w >> mouseMoveWindow w
-              >> windows W.shiftMaster
+          focus w >> mouseMoveWindow w
+            >> windows W.shiftMaster
       ),
       -- mod-button2, Raise the window to the top of the stack
       ((modm, button2), \w -> focus w >> windows W.shiftMaster),
       -- mod-button3, Set the window to floating mode and resize by dragging
       ( (modm, button3),
         \w ->
-            focus w >> mouseResizeWindow w
-              >> windows W.shiftMaster
+          focus w >> mouseResizeWindow w
+            >> windows W.shiftMaster
       )
       -- you may also bind events to the mouse scroll wheel (button4 and button5)
     ]
@@ -181,20 +183,20 @@ myMouseBindings XConfig {XMonad.modMask = modm} =
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-    -- default tiling algorithm partitions the screen into two panes
+-- default tiling algorithm partitions the screen into two panes
 myLayout = tiled ||| Mirror tiled ||| Full
-    where
-      -- default tiling algorithm partitions the screen into two panes
-      tiled = Tall nmaster delta ratio
+  where
+    -- default tiling algorithm partitions the screen into two panes
+    tiled = Tall nmaster delta ratio
 
-      -- The default number of windows in the master pane
-      nmaster = 1
+    -- The default number of windows in the master pane
+    nmaster = 1
 
-      -- Default proportion of screen occupied by master pane
-      ratio = 1 / 2
+    -- Default proportion of screen occupied by master pane
+    ratio = 1 / 2
 
-      -- Percent of screen to increment by when resizing panes
-      delta = 3 / 100
+    -- Percent of screen to increment by when resizing panes
+    delta = 3 / 100
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -211,18 +213,45 @@ myLayout = tiled ||| Mirror tiled ||| Full
 -- To match on the WM_NAME, you can use 'title' in the same way that
 -- 'className' and 'resource' are used below.
 --
+myWorkspaceShifts =
+  [ (className =? "1Password", "1"),
+    (className =? "code", "1"),
+    (className =? "blueman-manager", "1"),
+    (className =? "jetbrains-phpstorm", "3")
+  ]
+
+myFloats =
+  [ className =? "MPlayer",
+    className =? "Gimp"
+  ]
+
+myCenterFloats =
+  [ className =? "1Password",
+    className =? "flameshot"
+  ]
+
+myRectFloats =
+  [ (resource =? "blueman-manager", RationalRect 0.42 0.25 0.16 0.5)
+  ]
+
+myIgnores =
+  [ resource =? "desktop_window",
+    resource =? "kdesktop"
+  ]
+
+myHideIgnores =
+  [ -- Hide chrome screen sharing popup on google meet
+    title =? "meet.google.com is sharing your screen."
+  ]
+
 myManageHook =
-  composeAll
-    [ className =? "MPlayer" --> doFloat,
-      className =? "Gimp" --> doFloat,
-      className =? "1Password" --> doCenterFloat,
-      className =? "jetbrains-toolbox" --> doCenterFloat,
-      className =? "flameshot" --> doCenterFloat,
-      resource =? "desktop_window" --> doIgnore,
-      resource =? "kdesktop" --> doIgnore,
-      resource =? "polybar" --> doIgnore,
-      -- Hide chrome screen sharing popup oin google meet
-      title =? "meet.google.com is sharing your screen." --> doHideIgnore
+  composeAll . concat $
+    [ [myMatcher --> doShift myWorkspace | (myMatcher, myWorkspace) <- myWorkspaceShifts],
+      [myMatcher --> doFloat | myMatcher <- myFloats],
+      [myMatcher --> doCenterFloat | myMatcher <- myCenterFloats],
+      [myMatcher --> doRectFloat myRect | (myMatcher, myRect) <- myRectFloats],
+      [myMatcher --> doIgnore | myMatcher <- myIgnores],
+      [myMatcher --> doHideIgnore | myMatcher <- myHideIgnores]
     ]
 
 ------------------------------------------------------------------------
@@ -262,10 +291,11 @@ myStartupHook = do
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = do
-  xmonad
-  $ docks . ewmh . fullscreenSupport
-  $ defaults
+main =
+  do
+    xmonad
+    $ docks . ewmh . fullscreenSupport $
+      defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
