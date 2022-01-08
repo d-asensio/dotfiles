@@ -18,6 +18,7 @@ export path=(
   "$GOPATH/bin"
   "$HOME/.volta/bin"
   "$HOME/.cargo/bin"
+  "$HOME/.local/bin"
   "/usr/local/opt/ruby/bin"
   "/usr/local/opt/python/libexec/bin"
   "/opt/homebrew/bin"
@@ -27,4 +28,5 @@ export path=(
   "/usr/bin"
   "/usr/sbin"
   "/sbin"
+  "/snap/bin"
 )
