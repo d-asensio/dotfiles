@@ -1,7 +1,7 @@
 [user]
 	name = David Asensio Cañas
 	email = david.asensio@icloud.com
-	signingkey = 8B35EA686DF55CCA78D145B7623261AA6EC1E141
+	signingkey = 8A6D5A2F5689AE7C4050BC9DFDC0984B5C676D73
 [alias]
 	st = status
 	lg = log --graph --decorate --date-order --oneline
@@ -19,3 +19,5 @@
 # Conditional configurations
 [includeIf "gitdir:~/projects/lifull/"]
 	path = ~/projects/lifull/.gitconfig
+[core]
+	editor = vi
