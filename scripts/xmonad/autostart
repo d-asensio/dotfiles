@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Start picom compositor
+picom --config $HOME/.config/picom/picom.conf &
+
+# Start polybar
+dot polybar launch &
+
+# Run flameshot daemon
+flameshot &

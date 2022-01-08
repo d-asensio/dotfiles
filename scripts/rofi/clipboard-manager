@@ -1,0 +1,14 @@
+#!/bin/bash
+rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+sleep 0.1
+
+# Capture the selection
+TEXT="$( xclip -o -selection clipboard )"
+
+# Only attempt to paste if there has been selection
+if [ "${TEXT}x" != "x" ]; then
+  xdotool key --clearmodifiers "super+v"
+
+  # clear selection on paste
+  echo "" | xclip -selection clipboard
+fi
