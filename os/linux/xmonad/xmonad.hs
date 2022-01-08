@@ -80,7 +80,7 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
       ((controlMask , xK_space), spawn "rofi -show drun"),
       ((controlMask , xK_Tab), spawn "rofi -modi window -show window"),
       -- -- In paste mode
-      ((modm .|. shiftMask, xK_v), spawn "bash $HOME/.dotfiles/scripts/rofi/clipboard-manager$HOME/.dotfiles/scripts/xmonad/autostart"),
+      ((modm .|. shiftMask, xK_v), spawn "zsh $HOME/.dotfiles/scripts/rofi/clipboard-manager"),
       -- -- In emoji mode
       ((modm, xK_y), spawn "rofimoji"),
       -- close focused window
