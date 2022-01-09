@@ -17,13 +17,13 @@ import XMonad.Hooks.ManageDocks (ToggleStruts (ToggleStruts), avoidStruts, docks
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.Fullscreen
+import XMonad.Layout.Grid (Grid (Grid))
+import XMonad.Layout.IndependentScreens
+import XMonad.Layout.PerScreen
 import XMonad.Layout.Spacing
 import XMonad.StackSet (RationalRect (RationalRect))
 import qualified XMonad.StackSet as W
 import XMonad.Util.SpawnOnce
-import XMonad.Layout.IndependentScreens
-import XMonad.Layout.Grid (Grid(Grid))
-import XMonad.Layout.PerScreen
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -92,7 +92,7 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
       -- close focused window
       ((controlMask, xK_q), kill),
       -- Rotate through the available layout algorithms
-      ((modm, xK_Return), sendMessage NextLayout),
+      ((modm, xK_space), sendMessage NextLayout),
       --  Reset the layouts on the current workspace to default
       ((modm .|. shiftMask, xK_space), setLayout $ XMonad.layoutHook conf),
       -- Resize viewed windows to the correct size
@@ -106,8 +106,7 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
       -- Move focus to the master window
       ((modm, xK_m), windows W.focusMaster),
       -- Swap the focused window and the master window
-      -- , ((modm,               xK_Return), windows W.swapMaster)
-
+      ((modm, xK_Return), windows W.swapMaster),
       -- Swap the focused window with the next window
       ((modm .|. shiftMask, xK_j), windows W.swapDown),
       -- Swap the focused window with the previous window
@@ -185,19 +184,23 @@ myMouseBindings XConfig {XMonad.modMask = modm} =
 -- which denotes layout choice.
 --
 -- default tiling algorithm partitions the screen into two panes
-myLayout = ifWider 1440 (tiled ||| Mirror tiled ||| Full) Grid
-  where
-    -- default tiling algorithm partitions the screen into two panes
-    tiled = Tall nmaster delta ratio
 
-    -- The default number of windows in the master pane
-    nmaster = 1
+myTileResizeDelta = 3 / 100
 
-    -- Default proportion of screen occupied by master pane
-    ratio = 1 / 2
+---- types
+myTiledLayoutMasterOneHalf = Tall 1 myTileResizeDelta (1 / 2)
 
-    -- Percent of screen to increment by when resizing panes
-    delta = 3 / 100
+myTiledLayoutMasterOneThird = Tall 1 myTileResizeDelta (1 / 3)
+
+
+---- mapping to screens
+myWidescreenLayout = myTiledLayoutMasterOneHalf ||| myTiledLayoutMasterOneThird ||| Full
+
+myVerticalScreenLayout = Grid
+
+---- hook
+myLayout = do
+  ifWider 1440 myWidescreenLayout myVerticalScreenLayout
 
 ------------------------------------------------------------------------
 -- Window rules:
