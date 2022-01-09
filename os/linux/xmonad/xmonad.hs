@@ -189,11 +189,11 @@ myLayout = do
   where
     ---- types
     myTiledLayoutMasterOneHalf = Tall 1 myTileResizeDelta (1 / 2)
-    myTiledLayoutMasterOneThird = Tall 1 myTileResizeDelta (1 / 3)
+    myTiledLayoutMasterTwoThirds = Tall 1 myTileResizeDelta (2 / 3)
 
 
     ---- mapping to screens
-    myWidescreenLayout = myTiledLayoutMasterOneHalf ||| myTiledLayoutMasterOneThird ||| Full
+    myWidescreenLayout = myTiledLayoutMasterOneHalf ||| myTiledLayoutMasterTwoThirds ||| Full
     myVerticalScreenLayout = Grid
 
 ------------------------------------------------------------------------
