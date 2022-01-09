@@ -3,6 +3,6 @@
 if [ -z "$@" ]; then
   greenclip print
 else
-  coproc (./paste-text "$1" &)
+  coproc ($(dirname "$0")/paste-text "$1" &)
   exit 0
 fi
