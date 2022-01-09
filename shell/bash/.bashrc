@@ -38,6 +38,7 @@ done
 
 if [ -n "$(ls -A "$DOTFILES_PATH/shell/bash/completions/")" ]; then
   for bash_file in "$DOTFILES_PATH"/shell/bash/completions/*; do
-    source "$bash_file"
+    # source "$bash_file"
+    echo "$bash_file"
   done
 fi
