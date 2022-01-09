@@ -21,6 +21,9 @@ import XMonad.Layout.Spacing
 import XMonad.StackSet (RationalRect (RationalRect))
 import qualified XMonad.StackSet as W
 import XMonad.Util.SpawnOnce
+import XMonad.Layout.IndependentScreens
+import XMonad.Layout.Grid (Grid(Grid))
+import XMonad.Layout.PerScreen
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -59,7 +62,7 @@ myModMask = mod4Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+myWorkspaces = ["1", "2", "3", "4"]
 
 -- Window Border
 --
@@ -184,7 +187,7 @@ myMouseBindings XConfig {XMonad.modMask = modm} =
 -- which denotes layout choice.
 --
 -- default tiling algorithm partitions the screen into two panes
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = ifWider 1440 (tiled ||| Mirror tiled ||| Full) Grid
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled = Tall nmaster delta ratio
@@ -217,7 +220,8 @@ myWorkspaceShifts =
   [ (className =? "1Password", "1"),
     (className =? "code", "1"),
     (className =? "blueman-manager", "1"),
-    (className =? "jetbrains-phpstorm", "3")
+    (className =? "jetbrains-phpstorm", "3"),
+    (resource =? "slack", "2")
   ]
 
 myFloats =
