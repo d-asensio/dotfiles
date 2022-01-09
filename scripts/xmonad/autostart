@@ -5,6 +5,3 @@ picom --config $HOME/.config/picom/picom.conf &
 
 # Start polybar
 $HOME/.dotfiles/scripts/polybar/launch &
-
-# Run flameshot daemon
-flameshot &
