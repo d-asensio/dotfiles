@@ -2,6 +2,5 @@ configuration {
  modi: "drun,run,window";
  font: "FiraCode Nerd Font 12";
  show-icons: true;
- width: 600;
 }
 @theme "~/.config/rofi/themes/custom-dark.rasi"
