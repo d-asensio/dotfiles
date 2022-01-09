@@ -130,9 +130,7 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
       -- Quit xmonad
       ((modm .|. shiftMask, xK_q), io exitSuccess),
       -- Restart xmonad
-      ((modm, xK_q), spawn "xmonad --recompile; xmonad --restart"),
-      -- Run xmessage with a summary of the default keybindings (useful for beginners)
-      ((modm .|. shiftMask, xK_slash), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
+      ((modm, xK_q), spawn "xmonad --recompile; xmonad --restart")
     ]
       ++
       --
