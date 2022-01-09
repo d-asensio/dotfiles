@@ -41,7 +41,7 @@ myClickJustFocuses = False
 -- Gap around the screen and windows
 myScreenGap = Border 0 5 5 5
 
-myWindowGap = Border 0 10 5 5
+myWindowGap = Border 5 5 5 5
 
 applyGaps = spacingRaw False myScreenGap True myWindowGap True
 
