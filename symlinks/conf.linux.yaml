@@ -11,6 +11,7 @@
     ~/.Xresources: os/linux/xorg/xresources
     ~/.xsessionrc: os/linux/xorg/xsessionrc
     ~/.xmonad/xmonad.hs: os/linux/xmonad/xmonad.hs
+    ~/.config/greenclip.toml: os/linux/greenclip/greenclip.toml
     ~/.config/picom/picom.conf: os/linux/picom/picom.conf
     ~/.config/polybar/config: os/linux/polybar/config
     ~/.config/rofi/config.rasi: os/linux/rofi/config.rasi
