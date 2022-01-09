@@ -187,20 +187,17 @@ myMouseBindings XConfig {XMonad.modMask = modm} =
 
 myTileResizeDelta = 3 / 100
 
----- types
-myTiledLayoutMasterOneHalf = Tall 1 myTileResizeDelta (1 / 2)
-
-myTiledLayoutMasterOneThird = Tall 1 myTileResizeDelta (1 / 3)
-
-
----- mapping to screens
-myWidescreenLayout = myTiledLayoutMasterOneHalf ||| myTiledLayoutMasterOneThird ||| Full
-
-myVerticalScreenLayout = Grid
-
----- hook
 myLayout = do
   ifWider 1440 myWidescreenLayout myVerticalScreenLayout
+  where
+    ---- types
+    myTiledLayoutMasterOneHalf = Tall 1 myTileResizeDelta (1 / 2)
+    myTiledLayoutMasterOneThird = Tall 1 myTileResizeDelta (1 / 3)
+
+
+    ---- mapping to screens
+    myWidescreenLayout = myTiledLayoutMasterOneHalf ||| myTiledLayoutMasterOneThird ||| Full
+    myVerticalScreenLayout = Grid
 
 ------------------------------------------------------------------------
 -- Window rules:
