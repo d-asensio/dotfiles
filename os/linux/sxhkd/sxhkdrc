@@ -25,8 +25,8 @@ XF86AudioNext
   playerctl next
 
 # Flameshot
-super + shift + dollar
-  fameshot & flameshot gui &
+# super + shift + dollar
+#  fameshot ; flameshot gui &
 
 # Rofi
 ctrl + space
