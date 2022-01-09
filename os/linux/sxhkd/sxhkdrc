@@ -1,3 +1,4 @@
+# Volume buttons
 XF86AudioRaiseVolume
   amixer -D pulse sset Master 5%+
 
@@ -13,6 +14,7 @@ shift + XF86AudioLowerVolume
 XF86AudioMute
   amixer -D pulse set Master 1+ toggle
 
+# Media buttons
 XF86AudioPrev
   playerctl previous
 
@@ -22,11 +24,19 @@ XF86AudioPlay
 XF86AudioNext
   playerctl next
 
+# Flameshot
 super + shift + dollar
   flameshot gui &
 
-control + space
-  rofi -show drun
+# Rofi
+ctrl + space
+  rofi -modi drun -show drun
 
-control + Tab
+ctrl + Tab
   rofi -modi window -show window
+
+ctrl + alt + v
+  rofi -modi "paste:$HOME/.dotfiles/scripts/rofi/paste-modi" -show paste
+
+ctrl + alt + e
+  rofimoji

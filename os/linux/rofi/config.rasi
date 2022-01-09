@@ -1,5 +1,4 @@
 configuration {
- modi: "drun,run,window";
  font: "FiraCode Nerd Font 12";
  show-icons: true;
 }

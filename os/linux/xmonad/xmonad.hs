@@ -82,10 +82,6 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
   M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf),
-      -- -- In paste mode
-      ((modm .|. shiftMask, xK_v), spawn "zsh $HOME/.dotfiles/scripts/rofi/clipboard-manager"),
-      -- -- In emoji mode
-      ((modm, xK_y), spawn "rofimoji"),
       -- close focused window
       ((controlMask, xK_q), kill),
       -- Rotate through the available layout algorithms
