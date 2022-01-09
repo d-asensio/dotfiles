@@ -7,6 +7,7 @@
 
 - link:
     ~/.xmodmap: os/linux/xmodmap/xmodmaprc
+    ~/.xprofile: os/linux/xorg/xprofile
     ~/.Xresources: os/linux/xorg/xresources
     ~/.xsessionrc: os/linux/xorg/xsessionrc
     ~/.xmonad/xmonad.hs: os/linux/xmonad/xmonad.hs

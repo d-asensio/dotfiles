@@ -1,7 +1,4 @@
 #!/bin/bash
-# Configure screens
-$HOME/.dotfiles/scripts/screen-layout/dual_ultrawide-rotated &
-
 # Remap keyboard
 sxhkd &
 
