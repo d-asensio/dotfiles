@@ -24,3 +24,9 @@ XF86AudioNext
 
 super + shift + dollar
   flameshot gui &
+
+control + space
+  rofi -show drun
+
+control + Tab
+  rofi -modi window -show window

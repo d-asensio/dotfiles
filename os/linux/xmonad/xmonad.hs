@@ -82,9 +82,6 @@ myKeys conf@XConfig {XMonad.modMask = modm} =
   M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf),
-      -- launch rofi
-      ((controlMask, xK_space), spawn "rofi -show drun"),
-      ((controlMask, xK_Tab), spawn "rofi -modi window -show window"),
       -- -- In paste mode
       ((modm .|. shiftMask, xK_v), spawn "zsh $HOME/.dotfiles/scripts/rofi/clipboard-manager"),
       -- -- In emoji mode
