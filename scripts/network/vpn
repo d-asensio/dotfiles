@@ -36,9 +36,9 @@ vpn::toggle() {
 
 vpn::check() {
   if vpn::is_connected $1; then
-    echo "$1 conected"
+    echo "VPN on"
   else
-    echo "VPN disconnected"
+    echo "VPN off"
   fi
 }
 
