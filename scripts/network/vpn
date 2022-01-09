@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+##? Manages VPN connections
+#?? 1.0.0
+##?
+##? Usage:
+##?   vpn connect <vpn_name>
+##?   vpn disconnect <vpn_name>
+##?   vpn toggle <vpn_name>
+##?   vpn check <vpn_name>
+
+vpn::is_connected() {
+  connection_status=$(nmcli con show --active $1)
+  [ ! -z "$connection_status" ]
+}
+
+vpn::connect() {
+  nmcli con up id $1
+}
+
+vpn::disconnect() {
+  nmcli con down id $1
+}
+
+vpn::toggle() {
+  if vpn::is_connected $1; then
+    echo "$1 was conected. Disconnecting..."
+    vpn::disconnect $1
+  else
+    echo "$1 was not conected. Connecting..."
+    vpn::connect $1
+  fi
+}
+
+vpn::check() {
+  if vpn::is_connected $1; then
+    echo "$1 conected"
+  else
+    echo "VPN disconnected"
+  fi
+}
+
+case $1 in
+  connect)
+    vpn::connect $2
+    ;;
+  disconnect)
+    vpn::disconnect $2
+    ;;
+  toggle)
+    vpn::toggle $2
+    ;;
+  check)
+    vpn::check $2
+    ;;
+esac
