@@ -3,5 +3,8 @@
 # Wait until the processes have been shut down
 # while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
 
-# Start polybar
+# Start polybar on ultrawide screen
 polybar --reload dell-ultrawide-minimal -c $HOME/.config/polybar/config &
+
+# Start polybar on vertical screen
+polybar --reload dell-vertical-minimal -c $HOME/.config/polybar/config &
