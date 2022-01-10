@@ -16,4 +16,5 @@
     ~/.config/polybar/config: os/linux/polybar/config
     ~/.config/rofi/config.rasi: os/linux/rofi/config.rasi
     ~/.config/rofi/themes: os/linux/rofi/themes
+    ~/.config/dunst/dunstrc: os/linux/dunst/dunstrc
     ~/.icons: os/linux/cursors
