@@ -28,9 +28,11 @@ vpn::toggle() {
   if vpn::is_connected $1; then
     echo "$1 was conected. Disconnecting..."
     vpn::disconnect $1
+    notify-send -i network-vpn "$1 disconnected." "`date`"
   else
     echo "$1 was not conected. Connecting..."
     vpn::connect $1
+    notify-send -i network-vpn "$1 connected." "`date`"
   fi
 }
 
