@@ -30,10 +30,10 @@ XF86AudioNext
 
 # Rofi
 ctrl + space
-  rofi -modi drun -show drun
+  rofi -modi drun -show drun -show-icons
 
 ctrl + Tab
-  rofi -modi window -show window
+  rofi -modi window -show window -show-icons
 
 ctrl + alt + v
   rofi -modi "paste:$HOME/.dotfiles/scripts/rofi/paste-modi" -show paste

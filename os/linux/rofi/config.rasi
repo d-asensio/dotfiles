@@ -1,6 +1,5 @@
 configuration {
  font: "FiraCode Nerd Font 12";
- show-icons: true;
  icon-theme: "Papirus";
 }
 @theme "~/.config/rofi/themes/custom-dark.rasi"
