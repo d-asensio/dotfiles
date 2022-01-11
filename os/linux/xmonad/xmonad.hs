@@ -226,7 +226,9 @@ myCenterFloats =
   ]
 
 myRectFloats =
-  [ (resource =? "blueman-manager", RationalRect 0.42 0.25 0.16 0.5)
+  [ (resource =? "blueman-manager", RationalRect 0.42 0.25 0.16 0.5),
+    (resource =? "pavucontrol", RationalRect 0.42 0.25 0.16 0.5),
+    (resource =? "gnome-control-center", RationalRect 0.25 0.25 0.5 0.5)
   ]
 
 myIgnores =
@@ -235,8 +237,9 @@ myIgnores =
   ]
 
 myHideIgnores =
-  [ -- Hide chrome screen sharing popup on google meet
-    title =? "meet.google.com is sharing your screen."
+  [ -- Hide screen sharing popup on google meet
+    title =? "meet.google.com is sharing your screen.",
+    title =? "gather.town is sharing your screen."
   ]
 
 myManageHook =
