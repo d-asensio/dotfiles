@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-[[ -z "$@" ]] && exit 0
-
-echo "$1" | xclip -selection clipboard
-
-xdotool key --clearmodifiers "super+v"

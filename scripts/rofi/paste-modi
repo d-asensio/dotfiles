@@ -3,6 +3,7 @@
 if [ -z "$@" ]; then
   greenclip print
 else
-  coproc ($(dirname "$0")/paste-text "$1" &)
+  greenclip print "$1"
+  coproc (xdotool key --clearmodifiers "super+v" &)
   exit 0
 fi
