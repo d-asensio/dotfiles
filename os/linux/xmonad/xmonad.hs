@@ -211,7 +211,6 @@ myWorkspaceShifts =
   [ (className =? "1Password", "1"),
     (className =? "code", "1"),
     (className =? "blueman-manager", "1"),
-    (className =? "jetbrains-phpstorm", "3"),
     (resource =? "slack", "2")
   ]
 
