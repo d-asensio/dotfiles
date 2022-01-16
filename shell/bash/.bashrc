@@ -36,7 +36,7 @@ for bash_file in "$DOTLY_PATH"/shell/bash/completions/*; do
   source "$bash_file"
 done
 
-# Activate if adding comletions to bash
+# Activate if adding completions to bash
 # 
 # if [ -n "$(ls -A "$DOTFILES_PATH/shell/bash/completions/")" ]; then
 #   for bash_file in "$DOTFILES_PATH"/shell/bash/completions/*; do
