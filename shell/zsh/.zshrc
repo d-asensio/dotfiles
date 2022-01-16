@@ -8,7 +8,8 @@ setopt +o nomatch
 # setopt autopushd
 
 # Start zim
-source "$ZIM_HOME/init.zsh"
+# TODO Activate after fixing zim
+# source "$ZIM_HOME/init.zsh"
 
 # Async mode for autocompletion
 ZSH_AUTOSUGGEST_USE_ASYNC=true
