@@ -43,3 +43,6 @@ done
 #     source "$bash_file"
 #   done
 # fi
+
+# Init direnv hook
+eval "$(direnv hook bash)"
