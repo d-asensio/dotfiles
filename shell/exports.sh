@@ -22,6 +22,7 @@ export path=(
   "/usr/local/opt/ruby/bin"
   "/usr/local/opt/python/libexec/bin"
   "/opt/homebrew/bin"
+  "/opt/homebrew/sbin"
   "/usr/local/bin"
   "/usr/local/sbin"
   "/bin"
